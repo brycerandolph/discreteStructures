@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/student/Desktop/Part2/freshstart.cpp
+iostream
+-
+fstream
+-
+iomanip
+-
+cstdlib
+-
+string
+-
+vector
+-
+stdio.h
+-
+cmath
+-
+sstream
+-
+

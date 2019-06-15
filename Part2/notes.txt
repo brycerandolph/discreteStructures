@@ -1,0 +1,54 @@
+# of rows: #of lines in document
+# of columns:  #of words in dictionary
+
+each row should contain a bitstring of length 354 with at least 50% ones 
+
+ the number of poems of class C containing word wt for each word in the dictionary (That is, frequency of occurrence of word wt in shakespearean/elizabethan poems) + 1 / the number of poems labelled with class C=S, E (That is, number of poems known to be shakespearean and elizabethan, respectively+2)
+
+Shakes train
+(colTotal1[i] +1)/(doc1.size()=2)
+
+Eliz train
+(colTotal2[i] +1)/(doc2.size()=2)
+
+  
+    vector<float> colTotal;
+    float pushit;
+    for(int m=0; m<doc1.size();m++)
+      {
+	pushit=0.0;
+	for(int n =0; n<dictionarySize; n++)
+	  {
+	    if(feature1[m][n]==1)
+	      pushit++;
+	    	    
+	  }
+	colTotal.push_back(pushit);
+      }
+    vector<float> fractions;
+    float frac;
+    for(int d=0;d<colTotal.size();d++)
+      {
+	//frac =  colTotal[i]/doc1.size();
+	frac = 
+	fractions.push_back(frac);
+
+
+      }
+
+
+taking the log of individual properties and adding them together
+
+if feature3[i][j]==1
+sum+=log(fraction[j]) 
+
+if feature3[i][j]=0
+sum+=log(1-fraction[j]) 
+
+compare posterior probabilities of shake and eliz. Increment the counter of total shake or eliz accordingly
+
+first for loop decides the sonnet
+second for loop decides word to check
+
+each sonnet has two probabilities
+

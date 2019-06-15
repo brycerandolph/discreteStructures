@@ -1,0 +1,86 @@
+//
+// Created by Timothy Gallagher on 11/16/2017.
+//
+
+// Project: Project 2, checkpoint A
+// Name: Timothy Gallagher & Bryce Randolph
+// Class: CS 242
+// Date: 11/16/17
+// Purpose:
+
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+#include <vector>
+using namespace std;
+
+//Funtion Prototypes
+void readFile(string fileName, vector<string> * vecNames, ifstream &iFile);
+
+int main()
+{
+  int numFiles = 0; //variable for number of files user wants to input
+  string fileName; //filename variable thta will get stored in fileNames vector
+
+  cout << "Please input number of files: ";
+  cin >> numFiles; //input number of files
+
+  vector <string> fileNames; //file names vector
+  vector <int> fileNums;      //
+  vector <string> IndFiles; // Individual files
+  string fileN [numFiles];
+  for(int i = 0; i < numFiles; i++) // Loop allowing user to input file names based on number of files user specified
+    {
+      cout << "Enter name of file number " << i+1 << ": ";
+      cin >> fileN[i]; //storing file names
+    };
+
+  string fileVar; // temporary file variable that pulls the fileName from the vector and opens it.
+  int j = 0;
+  for(int i = 0; i < numFiles; i++)
+    {
+      fileVar = fileN[i]; // storing individual file names in single var
+      
+      ifstream file(fileVar); // open file from temp variable
+      //reserved for file error handler
+      
+      while (file.eof())
+        {
+	  // got stuck here, maybe use 2D vector? Need to store multiple
+	  // inputs as individual arrays. Let me know what you think.
+	  file >> IndFiles[fileNums[i]];  //Reading each individual char into the vector;
+        }
+      
+      
+    }
+
+  
+  return 0;
+}
+// ifstream file(string);
+// {  
+// }
+
+void readFile(string strFile, vector<string> * vecNames, ifstream &iFile)
+{
+  string
+
+  iFile.open(strFile.c_str()); //Opens file
+
+  while (iFile >> strFName >> strLName) //While the file is copying into the first and last names
+    {
+
+      vecNames.push_back(); //Push the data onto the back of the of the vector
+    }
+
+  iFile.close(); //Close the input file
+
+
+
+
+
+
+}
